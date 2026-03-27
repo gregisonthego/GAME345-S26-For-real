@@ -9,6 +9,7 @@ var ability_script # Set when card is instantiated and will be null if no abilit
 var card_type
 var health
 var attack
+var speed
 var defeated = false
 
 # Called when the node enters the scene tree for the first time.
