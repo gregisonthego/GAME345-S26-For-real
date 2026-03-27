@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bov0uxdpruo1d"]
+
+[ext_resource type="Script" path="res://Scenes/Multiplayer.gd" id="1_iyvdj"]
+[ext_resource type="PackedScene" uid="uid://cfy8ja75pcq41" path="res://Scenes/PlayerField.tscn" id="2_8yhtv"]
+[ext_resource type="PackedScene" uid="uid://bhlbdu7griu3s" path="res://Scenes/OpponentField.tscn" id="3_a5u6m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_iyvdj")
+player_field_scene = ExtResource("2_8yhtv")
+opponent_field_scene = ExtResource("3_a5u6m")
+
+[node name="HostButton" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 300.0
+offset_right = 644.0
+offset_bottom = 331.0
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="."]
+offset_left = 1189.0
+offset_top = 300.0
+offset_right = 1227.0
+offset_bottom = 331.0
+text = "Join"
+
+[connection signal="pressed" from="HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
