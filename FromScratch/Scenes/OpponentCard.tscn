@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://gsiddlb2orax"]
+
+[ext_resource type="Script" uid="uid://d17myw2nvo04e" path="res://Scripts/OpponentCard.gd" id="1_hpta2"]
+
+[node name="OpponentCard" type="Node2D" unique_id=261366852]
+script = ExtResource("1_hpta2")
