@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://db6qmdnqlwlw2"]
 
 [ext_resource type="Script" uid="uid://du23krp5yfifc" path="res://Map Workings/collsion_conditionals.gd" id="1_wgu4k"]
-[ext_resource type="Texture2D" uid="uid://bhybyybipeeih" path="res://icon.svg" id="2_7nbsn"]
+[ext_resource type="Texture2D" uid="uid://bhybyybipeeih" path="res://Art/icon.svg" id="2_wgu4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5jxl"]
 size = Vector2(126, 128)
@@ -13,7 +13,7 @@ position = Vector2(432, 238)
 script = ExtResource("1_wgu4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1112408265]
-texture = ExtResource("2_7nbsn")
+texture = ExtResource("2_wgu4k")
 
 [node name="Area2D" type="Area2D" parent="Node2D" unique_id=22762901]
 
