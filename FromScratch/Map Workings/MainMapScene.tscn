@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://db6qmdnqlwlw2"]
 
-[ext_resource type="Script" uid="uid://du23krp5yfifc" path="res://Map Workings/collsion_conditionals.gd" id="1_wgu4k"]
+[ext_resource type="Script" path="res://Map Workings/collsion_conditionals.gd" id="1_wgu4k"]
 [ext_resource type="Texture2D" uid="uid://bhybyybipeeih" path="res://Art/icon.svg" id="2_wgu4k"]
+[ext_resource type="PackedScene" uid="uid://txtw7jhon32h" path="res://Scenes/Player1.tscn" id="3_7nbsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5jxl"]
 size = Vector2(126, 128)
@@ -19,3 +20,6 @@ texture = ExtResource("2_wgu4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=804294092]
 shape = SubResource("RectangleShape2D_o5jxl")
+
+[node name="CharacterBody2D" parent="." unique_id=1044670931 instance=ExtResource("3_7nbsn")]
+position = Vector2(806, 358)
