@@ -6,7 +6,7 @@
 	#"Tornado" : [null, null, "Magic", "res://Scripts/Abilities/Tornado.gd", "Deal 1 damage to all opponent cards."]
 #}
 
-const DECKS= { # Combat, Speed, VP, Tag
+const CARDS= { # Combat, Speed, VP, Tag
 	"DeckA1" : [1, 4, null],
 	"DeckA2" : [2, 4, null],
 	"DeckA3" : [3, 4, null],
