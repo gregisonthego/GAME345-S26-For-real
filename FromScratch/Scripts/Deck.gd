@@ -4,7 +4,8 @@ const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const CARD_DRAW_SPEED = 0.2
 const STARTING_HAND_SIZE = 5
 
-var player_deck = ["DeckA1", "DeckA2", "DeckA3", "DeckA4", "DeckA5", "DeckA6", "DeckA7", "DeckA8", "DeckA9", "DeckAVP"]
+var player_deck = ["DeckA1", "DeckA2", "DeckA3", "DeckA4",
+ "DeckA5", "DeckA6", "DeckA7", "DeckA8", "DeckA9", "DeckAVP"]
 var card_database_reference
 var drawn_card_this_turn = false
 

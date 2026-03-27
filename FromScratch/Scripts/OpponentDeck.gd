@@ -5,7 +5,7 @@ const CARD_DRAW_SPEED = 0.2
 const STARTING_HAND_SIZE = 5
 
 var opponent_deck = ["DeckB1", "DeckB2", "DeckB3", "DeckB4",
-"DeckB5", "DeckB6", "DeckB7", "DeckB8", "DeckB9"]
+"DeckB5", "DeckB6", "DeckB7", "DeckB8", "DeckB9", "DeckBVP"]
 var card_database_reference
 
 # Called when the node enters the scene tree for the first time.
