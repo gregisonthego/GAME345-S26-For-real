@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bbsbh5f3x4eqy"]
+
+[ext_resource type="Texture2D" uid="uid://du28xt8pysayw" path="res://Art/coconut.jpg" id="1_aq5kj"]
+
+[node name="Node2D" type="Node2D" unique_id=1193260084]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=804862660]
+texture = ExtResource("1_aq5kj")
