@@ -8,7 +8,7 @@ var card_slot_card_is_in
 var ability_script # Set when card is instantiated and will be null if no ability
 var card_type
 var health
-var attack
+var combat
 var speed
 var defeated = false
 
