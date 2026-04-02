@@ -1,3 +1,78 @@
 [gd_scene format=3 uid="uid://cb7bace2riout"]
 
+[ext_resource type="Script" uid="uid://bdl6hfcphsj7x" path="res://card_manager.gd" id="1_jdutu"]
+[ext_resource type="PackedScene" uid="uid://crsxhxabcefqs" path="res://player_slot.tscn" id="2_gghva"]
+[ext_resource type="PackedScene" uid="uid://ci0gbl725da5h" path="res://opponent_slot.tscn" id="3_0ofxv"]
+[ext_resource type="Script" uid="uid://ml45es1aytvn" path="res://player_hand.gd" id="4_fjcv5"]
+[ext_resource type="Script" uid="uid://dettawbrk32nn" path="res://opponent_hand.gd" id="5_s65d8"]
+[ext_resource type="Script" uid="uid://cq4v2ous1idg1" path="res://deck.gd" id="6_lieti"]
+[ext_resource type="Script" uid="uid://bi7n7bgp5jnlw" path="res://opponent_deck.gd" id="7_3i0a7"]
+[ext_resource type="Script" uid="uid://irsortuwvn36" path="res://input_manager.gd" id="8_1qeb8"]
+[ext_resource type="Script" uid="uid://ccoktlr04f3g" path="res://battle_manager.gd" id="9_8hj2f"]
+
 [node name="MainReal" type="Node2D" unique_id=638267072]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=1984214783]
+script = ExtResource("1_jdutu")
+
+[node name="CardSlots" type="Node2D" parent="." unique_id=201413096]
+
+[node name="PlayerSlot" parent="CardSlots" unique_id=840310288 instance=ExtResource("2_gghva")]
+
+[node name="OpponentSlot" parent="CardSlots" unique_id=1572666023 instance=ExtResource("3_0ofxv")]
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=1599244368]
+script = ExtResource("4_fjcv5")
+
+[node name="OpponentHand" type="Node2D" parent="." unique_id=300664040]
+script = ExtResource("5_s65d8")
+
+[node name="Deck" type="Node2D" parent="." unique_id=966501081]
+script = ExtResource("6_lieti")
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck" unique_id=1063045289]
+
+[node name="Area2D" type="Area2D" parent="Deck" unique_id=2102091346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D" unique_id=243218557]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Deck" unique_id=2037692327]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OpponentDeck" type="Node2D" parent="." unique_id=732900476]
+script = ExtResource("7_3i0a7")
+
+[node name="Sprite2D" type="Sprite2D" parent="OpponentDeck" unique_id=1936762296]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OpponentDeck" unique_id=1979817563]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=233614009]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="InputManager" type="Node2D" parent="." unique_id=1273203926]
+script = ExtResource("8_1qeb8")
+
+[node name="BattleManager" type="Node2D" parent="." unique_id=830330097]
+script = ExtResource("9_8hj2f")
+
+[node name="BattleTimer" type="Timer" parent="." unique_id=1370350535]
+
+[node name="PlayerHealth" type="RichTextLabel" parent="." unique_id=218021429]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OpponentHealth" type="RichTextLabel" parent="." unique_id=716011487]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerDiscard" type="Node2D" parent="." unique_id=342206875]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDiscard" unique_id=1270592055]
+
+[node name="OpponentDiscard" type="Node2D" parent="." unique_id=4562052]
+
+[node name="Sprite2D" type="Sprite2D" parent="OpponentDiscard" unique_id=298977757]
