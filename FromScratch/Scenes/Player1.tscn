@@ -4,14 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://du28xt8pysayw" path="res://Art/coconut.jpg" id="1_nlwqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5fpy"]
-size = Vector2(64, 64)
+size = Vector2(8, 8)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1044670931]
 script = ExtResource("1_n5fpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1620792447]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_nlwqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504099050]
+shape = SubResource("RectangleShape2D_n5fpy")
 
 [node name="up" type="RayCast2D" parent="." unique_id=1163741192]
 position = Vector2(0, -12)
@@ -32,6 +35,3 @@ hit_from_inside = true
 position = Vector2(-12, 0)
 target_position = Vector2(-25, 0)
 hit_from_inside = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504099050]
-shape = SubResource("RectangleShape2D_n5fpy")
