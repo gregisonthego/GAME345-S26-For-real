@@ -1,8 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://0dg8ydr7g4iy"]
+[gd_scene format=3 uid="uid://0dg8ydr7g4iy"]
 
-[ext_resource type="Script" path="res://Scripts/OpponentCard.gd" id="1_bk70t"]
-[ext_resource type="Texture2D" uid="uid://bwodelme7ycse" path="res://Assets/Deck.png" id="2_ko2cl"]
-[ext_resource type="Texture2D" uid="uid://b4eion17g27lr" path="res://Assets/KnightCard.png" id="3_nhh1a"]
+[ext_resource type="Script" uid="uid://d17myw2nvo04e" path="res://Scripts/OpponentCard.gd" id="1_bk70t"]
 
 [sub_resource type="Animation" id="Animation_jvy60"]
 length = 0.001
@@ -21,7 +19,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Health:modulate")
+tracks/1/path = NodePath("Speed:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -97,7 +95,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Health:modulate")
+tracks/1/path = NodePath("Speed:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -157,26 +155,24 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6vtyb"]
 _data = {
-"RESET": SubResource("Animation_jvy60"),
-"card_flip": SubResource("Animation_6pkoj")
+&"RESET": SubResource("Animation_jvy60"),
+&"card_flip": SubResource("Animation_6pkoj")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6d6y"]
 size = Vector2(180, 265)
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Node2D" unique_id=780099087]
 position = Vector2(1780, 125)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_bk70t")
 
-[node name="CardBackImage" type="Sprite2D" parent="."]
-texture = ExtResource("2_ko2cl")
+[node name="CardBackImage" type="Sprite2D" parent="." unique_id=830992068]
 
-[node name="CardImage" type="Sprite2D" parent="."]
+[node name="CardImage" type="Sprite2D" parent="." unique_id=767555202]
 z_index = -1
-texture = ExtResource("3_nhh1a")
 
-[node name="Attack" type="RichTextLabel" parent="."]
+[node name="Attack" type="RichTextLabel" parent="." unique_id=2039155636]
 modulate = Color(0, 0, 0, 0)
 offset_left = -65.0
 offset_top = 75.0
@@ -185,7 +181,7 @@ offset_bottom = 115.0
 scale = Vector2(2, 2)
 text = "0"
 
-[node name="Health" type="RichTextLabel" parent="."]
+[node name="Speed" type="RichTextLabel" parent="." unique_id=1893865549]
 modulate = Color(0, 0, 0, 0)
 offset_left = 50.0
 offset_top = 75.0
@@ -194,14 +190,21 @@ offset_bottom = 115.0
 scale = Vector2(2, 2)
 text = "0"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_6vtyb")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1364168908]
+libraries/ = SubResource("AnimationLibrary_6vtyb")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="VictoryPointValue" type="RichTextLabel" parent="." unique_id=1664940174]
+modulate = Color(0, 0, 0, 0)
+offset_left = 51.25
+offset_top = 6.5
+offset_right = 91.25
+offset_bottom = 46.5
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1881164337]
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1379878173]
 shape = SubResource("RectangleShape2D_o6d6y")

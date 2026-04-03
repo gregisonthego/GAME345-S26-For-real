@@ -1,8 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfo0eruevpni4"]
+[gd_scene format=3 uid="uid://cfo0eruevpni4"]
 
-[ext_resource type="Script" path="res://Scripts/Card.gd" id="1_0kcs5"]
-[ext_resource type="Texture2D" uid="uid://b4eion17g27lr" path="res://Assets/KnightCard.png" id="1_tc15o"]
-[ext_resource type="Texture2D" uid="uid://bwodelme7ycse" path="res://Assets/Deck.png" id="2_gjd4o"]
+[ext_resource type="Script" uid="uid://c542ei1fealaf" path="res://Scripts/Card.gd" id="1_0kcs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73nov"]
 size = Vector2(180, 264)
@@ -24,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Health:modulate")
+tracks/1/path = NodePath("Speed:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -100,7 +98,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Health:modulate")
+tracks/1/path = NodePath("Speed:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -160,29 +158,27 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6vtyb"]
 _data = {
-"RESET": SubResource("Animation_jvy60"),
-"card_flip": SubResource("Animation_6pkoj")
+&"RESET": SubResource("Animation_jvy60"),
+&"card_flip": SubResource("Animation_6pkoj")
 }
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Node2D" unique_id=624134552]
 position = Vector2(140, 955)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_0kcs5")
 
-[node name="CardBackImage" type="Sprite2D" parent="."]
+[node name="CardBackImage" type="Sprite2D" parent="." unique_id=214780275]
 visible = false
-texture = ExtResource("2_gjd4o")
 
-[node name="CardImage" type="Sprite2D" parent="."]
+[node name="CardImage" type="Sprite2D" parent="." unique_id=547035171]
 z_index = -1
-texture = ExtResource("1_tc15o")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=744971000]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1700324264]
 shape = SubResource("RectangleShape2D_73nov")
 
-[node name="Attack" type="RichTextLabel" parent="."]
+[node name="Attack" type="RichTextLabel" parent="." unique_id=667427763]
 modulate = Color(0, 0, 0, 0)
 offset_left = -68.75
 offset_top = 6.5
@@ -191,7 +187,7 @@ offset_bottom = 46.5
 scale = Vector2(2, 2)
 text = "0"
 
-[node name="Health" type="RichTextLabel" parent="."]
+[node name="Speed" type="RichTextLabel" parent="." unique_id=1023494813]
 modulate = Color(0, 0, 0, 0)
 offset_left = 51.25
 offset_top = 6.5
@@ -200,18 +196,25 @@ offset_bottom = 46.5
 scale = Vector2(2, 2)
 text = "0"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_6vtyb")
-}
-
-[node name="Ability" type="RichTextLabel" parent="."]
+[node name="Ability" type="RichTextLabel" parent="." unique_id=1410415214]
 modulate = Color(0, 0, 0, 1)
 offset_left = -76.0
 offset_top = 54.0
 offset_right = 84.0
 offset_bottom = 123.0
 text = "If this card attacks, it can attack once again."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1953946228]
+libraries/ = SubResource("AnimationLibrary_6vtyb")
+
+[node name="VictoryPointValue" type="RichTextLabel" parent="." unique_id=1241193376]
+modulate = Color(0, 0, 0, 0)
+offset_left = 51.25
+offset_top = 6.5
+offset_right = 91.25
+offset_bottom = 46.5
+scale = Vector2(2, 2)
+text = "0"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
