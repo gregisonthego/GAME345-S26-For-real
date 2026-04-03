@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://duh0y13y4x8a5"]
+[gd_scene format=3 uid="uid://cb7bace2riout"]
 
 [ext_resource type="Script" path="res://card_manager.gd" id="1_jdutu"]
 [ext_resource type="PackedScene" path="res://player_slot.tscn" id="2_gghva"]
@@ -56,7 +56,7 @@ offset_bottom = 8.0
 [node name="InputManager" type="Node2D" parent="." unique_id=1273203926]
 script = ExtResource("8_1qeb8")
 
-[node name="BattleManager" type="Node2D" parent="." unique_id=830330097]
+[node name="BattleManager" type="Node" parent="." unique_id=1297556167]
 script = ExtResource("9_8hj2f")
 
 [node name="BattleTimer" type="Timer" parent="." unique_id=1370350535]
