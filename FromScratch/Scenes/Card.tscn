@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cfo0eruevpni4"]
 
 [ext_resource type="Script" uid="uid://c542ei1fealaf" path="res://Scripts/Card.gd" id="1_0kcs5"]
+[ext_resource type="Texture2D" uid="uid://du28xt8pysayw" path="res://Art/coconut.jpg" id="2_3p273"]
 
-<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73nov"]
 size = Vector2(180, 264)
 
@@ -163,7 +163,7 @@ _data = {
 &"card_flip": SubResource("Animation_6pkoj")
 }
 
-[node name="Card" type="Node2D" unique_id=624134552]
+[node name="Card2" type="Node2D" unique_id=624134552]
 position = Vector2(140, 955)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_0kcs5")
@@ -173,6 +173,7 @@ visible = false
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=547035171]
 z_index = -1
+texture = ExtResource("2_3p273")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=744971000]
 
@@ -219,19 +220,3 @@ text = "0"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
-=======
-[node name="Card" type="Node2D" unique_id=1649323347]
-script = ExtResource("1_pnb5n")
-
-[node name="CardBackImage" type="Sprite2D" parent="." unique_id=1798166404]
-
-[node name="CardImage" type="Sprite2D" parent="." unique_id=786240879]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1179119982]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=917998490]
-
-[node name="Attack" type="RichTextLabel" parent="." unique_id=739978701]
-offset_right = 40.0
-offset_bottom = 40.0
->>>>>>> Dan's-Branch
