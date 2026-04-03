@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://duh0y13y4x8a5"]
 
-[ext_resource type="Script" uid="uid://bdl6hfcphsj7x" path="res://card_manager.gd" id="1_jdutu"]
-[ext_resource type="PackedScene" uid="uid://crsxhxabcefqs" path="res://player_slot.tscn" id="2_gghva"]
-[ext_resource type="PackedScene" uid="uid://ci0gbl725da5h" path="res://opponent_slot.tscn" id="3_0ofxv"]
-[ext_resource type="Script" uid="uid://ml45es1aytvn" path="res://player_hand.gd" id="4_fjcv5"]
-[ext_resource type="Script" uid="uid://dettawbrk32nn" path="res://opponent_hand.gd" id="5_s65d8"]
-[ext_resource type="Script" uid="uid://cq4v2ous1idg1" path="res://deck.gd" id="6_lieti"]
-[ext_resource type="Script" uid="uid://bi7n7bgp5jnlw" path="res://opponent_deck.gd" id="7_3i0a7"]
-[ext_resource type="Script" uid="uid://irsortuwvn36" path="res://input_manager.gd" id="8_1qeb8"]
-[ext_resource type="Script" uid="uid://ccoktlr04f3g" path="res://battle_manager.gd" id="9_8hj2f"]
+[ext_resource type="Script" path="res://card_manager.gd" id="1_jdutu"]
+[ext_resource type="PackedScene" path="res://player_slot.tscn" id="2_gghva"]
+[ext_resource type="PackedScene" path="res://opponent_slot.tscn" id="3_0ofxv"]
+[ext_resource type="Script" path="res://player_hand.gd" id="4_fjcv5"]
+[ext_resource type="Script" path="res://opponent_hand.gd" id="5_s65d8"]
+[ext_resource type="Script" path="res://deck.gd" id="6_lieti"]
+[ext_resource type="Script" path="res://opponent_deck.gd" id="7_3i0a7"]
+[ext_resource type="Script" path="res://input_manager.gd" id="8_1qeb8"]
+[ext_resource type="Script" path="res://battle_manager.gd" id="9_8hj2f"]
 
 [node name="MainReal" type="Node2D" unique_id=638267072]
 
