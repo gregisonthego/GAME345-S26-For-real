@@ -6,10 +6,10 @@ signal hovered_off
 var starting_position
 var card_slot_card_is_in
 var ability_script # Set when card is instantiated and will be null if no ability
-var card_type
-var health
-var attack
+var card_tag
+var combat
 var speed
+var victory_point_value
 var defeated = false
 
 # Called when the node enters the scene tree for the first time.

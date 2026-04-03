@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://c0qitioj574s3"]
-
-[ext_resource type="Script" uid="uid://cvnu0t7es46mo" path="res://Scripts/OpponentDeck.gd" id="1_dskg3"]
-
-[node name="OpponentDeck" type="Node2D" unique_id=701208998]
-script = ExtResource("1_dskg3")

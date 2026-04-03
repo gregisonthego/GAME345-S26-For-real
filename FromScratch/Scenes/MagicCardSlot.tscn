@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bsvg5evvx1dbu"]
-
-[ext_resource type="Script" uid="uid://d4nmh3lm1l1lo" path="res://Scripts/MagicCardSlot.gd" id="1_4wf8b"]
-
-[node name="MagicCardSlot" type="Node2D" unique_id=1483510619]
-script = ExtResource("1_4wf8b")

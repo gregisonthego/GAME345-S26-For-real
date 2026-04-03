@@ -1,3 +1,69 @@
-[gd_scene format=3 uid="uid://cb7bace2riout"]
+[gd_scene format=3 uid="uid://bx1bhbtjcy204"]
+
+[ext_resource type="PackedScene" uid="uid://brtvel7kuopap" path="res://Scenes/CardSlot.tscn" id="1_xihpi"]
+[ext_resource type="PackedScene" uid="uid://dnx2hsev5o3ov" path="res://Scenes/OpponentCardSlot.tscn" id="2_wdaqr"]
 
 [node name="MainReal" type="Node2D" unique_id=638267072]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=1984214783]
+
+[node name="CardSlots" type="Node2D" parent="." unique_id=201413096]
+
+[node name="CardSlot" parent="CardSlots" unique_id=855353334 instance=ExtResource("1_xihpi")]
+
+[node name="OpponentCardSlot" parent="CardSlots" unique_id=122627201 instance=ExtResource("2_wdaqr")]
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=1599244368]
+
+[node name="OpponentHand" type="Node2D" parent="." unique_id=300664040]
+
+[node name="Deck" type="Node2D" parent="." unique_id=966501081]
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck" unique_id=1063045289]
+
+[node name="Area2D" type="Area2D" parent="Deck" unique_id=2102091346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D" unique_id=243218557]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Deck" unique_id=2037692327]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OpponentDeck" type="Node2D" parent="." unique_id=732900476]
+
+[node name="Sprite2D" type="Sprite2D" parent="OpponentDeck" unique_id=1936762296]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OpponentDeck" unique_id=1979817563]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=233614009]
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="InputManager" type="Node2D" parent="." unique_id=1273203926]
+
+[node name="BattleManager" type="Node" parent="." unique_id=1297556167]
+
+[node name="BattleTimer" type="Timer" parent="." unique_id=1370350535]
+
+[node name="PlayerHealth" type="RichTextLabel" parent="." unique_id=218021429]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OpponentHealth" type="RichTextLabel" parent="." unique_id=716011487]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerDiscard" type="Node2D" parent="." unique_id=342206875]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDiscard" unique_id=1270592055]
+
+[node name="OpponentDiscard" type="Node2D" parent="." unique_id=4562052]
+
+[node name="Sprite2D" type="Sprite2D" parent="OpponentDiscard" unique_id=298977757]
