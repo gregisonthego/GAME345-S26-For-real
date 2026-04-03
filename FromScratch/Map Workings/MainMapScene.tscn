@@ -1,21 +1,85 @@
 [gd_scene format=3 uid="uid://db6qmdnqlwlw2"]
 
-[ext_resource type="Script" uid="uid://du23krp5yfifc" path="res://Map Workings/collsion_conditionals.gd" id="1_wgu4k"]
-[ext_resource type="Texture2D" uid="uid://bhybyybipeeih" path="res://Art/icon.svg" id="2_wgu4k"]
+[ext_resource type="Script" uid="uid://bbtrp4mflxaku" path="res://Map Workings/board_manager.gd" id="1_7nbsn"]
+[ext_resource type="Script" uid="uid://rvvwakrnuxpd" path="res://Map Workings/board_node.gd" id="2_o5jxl"]
+[ext_resource type="Texture2D" uid="uid://ddvek6mtu6om1" path="res://Art/boardNode.png" id="3_fweq1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5jxl"]
-size = Vector2(126, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_i7ltj"]
+radius = 65.06919
 
 [node name="MainMapScene" type="Node2D" unique_id=888719019]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1344525556]
-position = Vector2(432, 238)
-script = ExtResource("1_wgu4k")
+[node name="BoardRoot" type="Node2D" parent="." unique_id=59653500]
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1112408265]
-texture = ExtResource("2_wgu4k")
+[node name="BoardManager" type="Node2D" parent="BoardRoot" unique_id=842710899]
+script = ExtResource("1_7nbsn")
 
-[node name="Area2D" type="Area2D" parent="Node2D" unique_id=22762901]
+[node name="Node1" type="Node2D" parent="BoardRoot" unique_id=1344525556]
+position = Vector2(280, 233)
+script = ExtResource("2_o5jxl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=804294092]
-shape = SubResource("RectangleShape2D_o5jxl")
+[node name="Sprite2D" type="Sprite2D" parent="BoardRoot/Node1" unique_id=1112408265]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9687501, 2.0000002)
+texture = ExtResource("3_fweq1")
+
+[node name="Area2D" type="Area2D" parent="BoardRoot/Node1" unique_id=22762901]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardRoot/Node1/Area2D" unique_id=804294092]
+shape = SubResource("CircleShape2D_i7ltj")
+
+[node name="Node2" type="Node2D" parent="BoardRoot" unique_id=1762595032]
+position = Vector2(460, 233)
+script = ExtResource("2_o5jxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardRoot/Node2" unique_id=881802110]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9687501, 2.0000002)
+texture = ExtResource("3_fweq1")
+
+[node name="Area2D" type="Area2D" parent="BoardRoot/Node2" unique_id=225968709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardRoot/Node2/Area2D" unique_id=43935878]
+shape = SubResource("CircleShape2D_i7ltj")
+
+[node name="Node3" type="Node2D" parent="BoardRoot" unique_id=1117213823]
+position = Vector2(638, 233)
+script = ExtResource("2_o5jxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardRoot/Node3" unique_id=2092585251]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9687501, 2.0000002)
+texture = ExtResource("3_fweq1")
+
+[node name="Area2D" type="Area2D" parent="BoardRoot/Node3" unique_id=1430653156]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardRoot/Node3/Area2D" unique_id=1326328473]
+shape = SubResource("CircleShape2D_i7ltj")
+
+[node name="Node4" type="Node2D" parent="BoardRoot" unique_id=1378935887]
+position = Vector2(809, 233)
+script = ExtResource("2_o5jxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardRoot/Node4" unique_id=64929106]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9687501, 2.0000002)
+texture = ExtResource("3_fweq1")
+
+[node name="Area2D" type="Area2D" parent="BoardRoot/Node4" unique_id=16482463]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardRoot/Node4/Area2D" unique_id=1554084888]
+shape = SubResource("CircleShape2D_i7ltj")
+
+[node name="Node5" type="Node2D" parent="BoardRoot" unique_id=821096467]
+position = Vector2(974, 233)
+script = ExtResource("2_o5jxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardRoot/Node5" unique_id=429357270]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9687501, 2.0000002)
+texture = ExtResource("3_fweq1")
+
+[node name="Area2D" type="Area2D" parent="BoardRoot/Node5" unique_id=1884564243]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardRoot/Node5/Area2D" unique_id=1102207796]
+shape = SubResource("CircleShape2D_i7ltj")
