@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://07lunv08pwu4" path="res://Assets/VPCard.png" id="3_3m7nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73nov"]
-size = Vector2(180, 264)
+size = Vector2(180.00003, 262.5)
 
 [sub_resource type="Animation" id="Animation_jvy60"]
 length = 0.001
@@ -178,12 +178,14 @@ texture = ExtResource("2_h8wm0")
 
 [node name="VPCardImage" type="Sprite2D" parent="." unique_id=641308315]
 z_index = -1
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(3.9339066e-06, 0)
+scale = Vector2(0.24, 0.25)
 texture = ExtResource("3_3m7nw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=744971000]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1700324264]
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_73nov")
 
 [node name="Attack" type="RichTextLabel" parent="." unique_id=667427763]
