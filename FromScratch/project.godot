@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="GAME345-S26-March27"
-run/main_scene="uid://duh0y13y4x8a5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Art/icon.svg"
 
