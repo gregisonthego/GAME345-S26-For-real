@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://db6qmdnqlwlw2"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://du23krp5yfifc" path="res://Map Workings/collsion_conditionals.gd" id="1_wgu4k"]
 [ext_resource type="Texture2D" uid="uid://bhybyybipeeih" path="res://Art/icon.svg" id="2_wgu4k"]
 
@@ -19,3 +20,23 @@ texture = ExtResource("2_wgu4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=804294092]
 shape = SubResource("RectangleShape2D_o5jxl")
+=======
+[ext_resource type="PackedScene" uid="uid://txtw7jhon32h" path="res://Scenes/Player1.tscn" id="3_7nbsn"]
+[ext_resource type="PackedScene" uid="uid://cxwgyh0chedho" path="res://Scenes/enemyCoconut.tscn" id="3_o5jxl"]
+[ext_resource type="Texture2D" uid="uid://dak1aia05pdxx" path="res://Map Workings/chessboard.png" id="4_o5jxl"]
+
+[node name="MainMapScene" type="Node2D" unique_id=888719019]
+
+[node name="CharacterBody2D" parent="." unique_id=1044670931 instance=ExtResource("3_7nbsn")]
+position = Vector2(325, 365)
+
+[node name="Chessboard" type="Sprite2D" parent="." unique_id=779819047]
+z_index = -1
+position = Vector2(600, 325)
+texture = ExtResource("4_o5jxl")
+
+[node name="RigidBody2D" parent="." unique_id=499409425 instance=ExtResource("3_o5jxl")]
+position = Vector2(880, 365)
+
+[connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
+>>>>>>> Stashed changes
