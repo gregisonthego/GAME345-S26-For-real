@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dt0yxpsyecllb"]
+
+[ext_resource type="Texture2D" uid="uid://dak1aia05pdxx" path="res://Map Workings/chessboard.png" id="1_ifpud"]
+[ext_resource type="PackedScene" uid="uid://txtw7jhon32h" path="res://Scenes/Player1.tscn" id="2_63toe"]
+[ext_resource type="PackedScene" uid="uid://cxwgyh0chedho" path="res://Scenes/enemyCoconut.tscn" id="3_iyatb"]
+
+[node name="MainMapScene" type="Node2D" unique_id=457371475]
+
+[node name="Chessboard" type="Sprite2D" parent="." unique_id=2028197535]
+position = Vector2(612, 321)
+texture = ExtResource("1_ifpud")
+
+[node name="CharacterBody2D" parent="." unique_id=1044670931 instance=ExtResource("2_63toe")]
+position = Vector2(336, 280)
+
+[node name="Enemy" parent="." unique_id=499409425 instance=ExtResource("3_iyatb")]
+position = Vector2(890, 283)
